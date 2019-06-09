@@ -20,15 +20,16 @@
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
+
     <!-- Your Pages -->
-    <TabBar>
+    <ShellItem Title="Basic TabBar">
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
         </Tab>
         <Tab Title="About" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
-    </TabBar>
+    </ShellItem>
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 
