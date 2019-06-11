@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsBasics.Views.HomePage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="tab_about.png"
+                     Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10, 0, 10, 10">
+                <Label Text="Hello, John"/>
+                
+                <Frame Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                            
+                        <Grid RowSpacing="0"
+                              ColumnSpacing="0"
+                              Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Text="Pickup from"
+                                   FontAttributes="Bold"/>
+                            <Label Text="Walmart Cranberry Township Store, 20245 Route 19"
+                                   LineBreakMode="WordWrap"
+                                   Grid.Row="1"/>
+                            
+                            <Button Text="Change"
+                                    BackgroundColor="Transparent"
+                                    Grid.Column="1"
+                                    Grid.RowSpan="2"/>
+                        </Grid>
+                        
+                        <BoxView HeightRequest="1"
+                                 BackgroundColor="Gray"
+                                 HorizontalOptions="FillAndExpand"
+                                 Grid.Row="1"/>
+                        
+                        <Grid RowSpacing="0"
+                              ColumnSpacing="0"
+                              Padding="5"
+                              Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Text="Reserve a time slot"
+                                   FontAttributes="Bold"/>
+                            <Label Text="Pickup is easy and free"
+                                   LineBreakMode="WordWrap"
+                                   Grid.Row="1"/>
+                            
+                            <Button Text="SEE TIMES"
+                                    Grid.Column="1"
+                                    Grid.RowSpan="2"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                
+                <Frame Padding="0">
+                    <Grid HeightRequest="300"
+                          RowSpacing="0"
+                          ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Text="Featured Items"
+                               Grid.ColumnSpan="3"
+                               HeightRequest="40"
+                               VerticalOptions="CenterAndExpand"
+                               VerticalTextAlignment="Center"/>
+                        
+                        <BoxView BackgroundColor="Gray"
+                                 HeightRequest="1"
+                                 HorizontalOptions="FillAndExpand"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="3"/>
+                        
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Image Source="icon.png"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   Aspect="AspectFit"/>
+                            
+                            <StackLayout Grid.Row="1"
+                                         VerticalOptions="FillAndExpand">
+                                <Label Text="$2.98"
+                                       FontAttributes="Bold"/>
+                                <Label Text="Hidden Valley original ranch salid dressing"
+                                       MaxLines="2"
+                                       LineBreakMode="TailTruncation"/>
+                                <Button Text="Add"
+                                        HorizontalOptions="End"/>
+                            </StackLayout>
+                        </Grid>
+                        
+                        <BoxView BackgroundColor="Gray"
+                                 WidthRequest="1"
+                                 VerticalOptions="FillAndExpand"
+                                 Grid.Row="2"
+                                 Grid.Column="1"/>
+                        
+                        <Grid Grid.Row="2"
+                              Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Image Source="icon.png"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   Aspect="AspectFit"/>
+                            
+                            <StackLayout Grid.Row="1"
+                                         VerticalOptions="FillAndExpand">
+                                <Label Text="$2.98"
+                                       FontAttributes="Bold"/>
+                                <Label Text="The original Hidden Valley original ranch salid dressing"
+                                       MaxLines="2"
+                                       LineBreakMode="TailTruncation"/>
+                                <Button Text="Add"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="End"/>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                
+                <Frame Padding="0">
+                    <Grid HeightRequest="300"
+                          RowSpacing="0"
+                          ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Text="More of the same Items"
+                               Grid.ColumnSpan="3"
+                               HeightRequest="40"
+                               VerticalOptions="CenterAndExpand"
+                               VerticalTextAlignment="Center"/>
+                        
+                        <BoxView BackgroundColor="Gray"
+                                 HeightRequest="1"
+                                 HorizontalOptions="FillAndExpand"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="3"/>
+                        
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Image Source="icon.png"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   Aspect="AspectFit"/>
+                            
+                            <StackLayout Grid.Row="1"
+                                         VerticalOptions="FillAndExpand">
+                                <Label Text="$2.98"
+                                       FontAttributes="Bold"/>
+                                <Label Text="Hidden Valley original ranch salid dressing"
+                                       MaxLines="2"
+                                       LineBreakMode="TailTruncation"/>
+                                <Button Text="Add"
+                                        HorizontalOptions="End"/>
+                            </StackLayout>
+                        </Grid>
+                        
+                        <BoxView BackgroundColor="Gray"
+                                 WidthRequest="1"
+                                 VerticalOptions="FillAndExpand"
+                                 Grid.Row="2"
+                                 Grid.Column="1"/>
+                        
+                        <Grid Grid.Row="2"
+                              Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Image Source="icon.png"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   Aspect="AspectFit"/>
+                            
+                            <StackLayout Grid.Row="1"
+                                         VerticalOptions="FillAndExpand">
+                                <Label Text="$2.98"
+                                       FontAttributes="Bold"/>
+                                <Label Text="The original Hidden Valley original ranch salid dressing"
+                                       MaxLines="2"
+                                       LineBreakMode="TailTruncation"/>
+                                <Button Text="Add"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="End"/>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>
