@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XamarinFormsBasics.Views" Title="XamarinFormsBasics" x:Class="XamarinFormsBasics.AppShell">
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:XamarinFormsBasics.Views"
+       xmlns:vm="clr-namespace:XamarinFormsBasics.ViewModels"
+       Title="XamarinFormsBasics"
+       x:Class="XamarinFormsBasics.AppShell">
     <!-- 
         Styles and Resources 
     -->
@@ -22,14 +27,51 @@
     </Shell.Resources>
 
     <!-- Your Pages -->
-    <ShellItem Title="Basic TabBar">
+    <!--<ShellItem Title="Basic TabBar">
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
         </Tab>
         <Tab Title="About" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
-    </ShellItem>
+    </ShellItem>-->
+    
+<!--    <ShellItem Title="Groceries">-->
+    <Tab Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}"/>
+    </Tab>
+    
+    <Tab Title="Favorites">
+        <ShellContent Title="Pantry"
+                      ContentTemplate="{DataTemplate local:PantryPage}"/>
+        <ShellContent Title="Eggs &amp; Dairy"
+                      ContentTemplate="{DataTemplate local:EggDairyPage}"/>
+        <ShellContent Title="Beverages"
+                      ContentTemplate="{DataTemplate local:FavoritesPage}"/>
+        <ShellContent Title="Frozen"
+                      ContentTemplate="{DataTemplate local:FavoritesPage}"/>
+        <ShellContent Title="Snacks &amp; Candy"
+                      ContentTemplate="{DataTemplate local:FavoritesPage}"/>
+        <ShellContent Title="Bread &amp; Bakery"
+                      ContentTemplate="{DataTemplate local:FavoritesPage}"/>
+        <ShellContent Title="Household Essentials"
+                      ContentTemplate="{DataTemplate local:FavoritesPage}"/>
+        <ShellContent Title="Meat"
+                      ContentTemplate="{DataTemplate local:FavoritesPage}"/>
+    </Tab>
+    
+    <Tab Title="Departments">
+        <ShellContent ContentTemplate="{DataTemplate local:DepartmentsPage}"/>
+    </Tab>
+    
+    <Tab Title="Search">
+        <ShellContent ContentTemplate="{DataTemplate local:SearchPage}"/>
+    </Tab>
+    
+    <Tab Title="Account">
+        <ShellContent ContentTemplate="{DataTemplate local:AccountPage}"/>
+    </Tab>
+<!--    </ShellItem>-->
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 

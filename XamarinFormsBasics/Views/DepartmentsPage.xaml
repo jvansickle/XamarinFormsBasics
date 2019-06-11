@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsBasics.Views.DepartmentsPage"
+             Title="Departments">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Departments}"
+                  RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Text="{Binding Name}"
+                                   VerticalOptions="CenterAndExpand"
+                                   VerticalTextAlignment="Center"/>
+                            
+                            <Image Source="{Binding Image}"
+                                   Grid.Column="1"
+                                   Aspect="AspectFill"
+                                   WidthRequest="60"
+                                   HeightRequest="60"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
