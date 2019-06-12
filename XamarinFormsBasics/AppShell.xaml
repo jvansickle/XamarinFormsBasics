@@ -4,7 +4,8 @@
        xmlns:local="clr-namespace:XamarinFormsBasics.Views"
        xmlns:vm="clr-namespace:XamarinFormsBasics.ViewModels"
        Title="XamarinFormsBasics"
-       x:Class="XamarinFormsBasics.AppShell">
+       x:Class="XamarinFormsBasics.AppShell"
+       Visual="Material">
     <!-- 
         Styles and Resources 
     -->
