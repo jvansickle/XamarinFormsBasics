@@ -8,10 +8,51 @@
                                     QueryIcon="icon.png"
                                     Groceries="{Binding GroceryItems}"
                                     DisplayMemberName="Name"
-                                    ShowsResults="true"/>
+                                    ShowsResults="true"
+                                    />
     </Shell.SearchHandler>
     
     <ContentPage.Content>
-        <Label Text="Search Page"/>
+        <CollectionView ItemsSource="{Binding GroceryItems}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="2"/>
+            </CollectionView.ItemsLayout>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HeightRequest="250">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Image Source="icon.png"
+                               VerticalOptions="FillAndExpand"
+                               HorizontalOptions="FillAndExpand"
+                               Aspect="AspectFit"/>
+                        
+                        <Grid Grid.Row="1"
+                              BackgroundColor="Gray">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Label Text="$Dollar"/>
+                            
+                            <Label Text="{Binding Name}"
+                                   Grid.Row="1"/>
+                            
+                            <Button Text="Add"
+                                    Grid.Row="2"
+                                    VerticalOptions="End"
+                                    HorizontalOptions="End"/>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>

@@ -15,6 +15,13 @@ namespace XamarinFormsBasics.ViewModels
                 new GroceryItem{Name = "Mountain Dew"},
                 new GroceryItem{Name = "Chicken Patties"},
                 new GroceryItem{Name = "Pierogies"},
+                new GroceryItem{Name = "Pizza"},
+                new GroceryItem{Name = "Bread"},
+                new GroceryItem{Name = "Chips"},
+                new GroceryItem{Name = "Trail Mix"},
+                new GroceryItem{Name = "Milk"},
+                new GroceryItem{Name = "Orange Juice"},
+                new GroceryItem{Name = "Pancakes"},
             };
         }
     }
