@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:XamarinFormsBasics.Controls"
              x:Class="XamarinFormsBasics.Views.SearchPage">
+    <Shell.SearchHandler>
+        <control:BasicSearchHandler Placeholder="Search"
+                                    QueryIcon="icon.png"
+                                    Groceries="{Binding GroceryItems}"
+                                    DisplayMemberName="Name"
+                                    ShowsResults="true"/>
+    </Shell.SearchHandler>
+    
     <ContentPage.Content>
         <Label Text="Search Page"/>
     </ContentPage.Content>

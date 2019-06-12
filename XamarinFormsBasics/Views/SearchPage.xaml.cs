@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using XamarinFormsBasics.ViewModels;
 
 namespace XamarinFormsBasics.Views
 {
@@ -10,6 +11,7 @@ namespace XamarinFormsBasics.Views
         public SearchPage()
         {
             InitializeComponent();
+            BindingContext = new SearchPageViewModel();
         }
     }
 }
